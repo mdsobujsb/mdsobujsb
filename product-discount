@@ -1,0 +1,232 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP4ZYcjO300MFdyFvP92Bp4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mdsobujsb/mdsobujsb/blob/main/product-discount\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##if-else- statement"
+      ],
+      "metadata": {
+        "id": "45QNhc3hlcn_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p3ZEvUbZkijR",
+        "outputId": "f61b20bb-29b5-460f-b0b3-b3e129a5fc9b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the product price: 2001\n",
+            "discount price 200.1\n",
+            "total price 1800.9\n"
+          ]
+        }
+      ],
+      "source": [
+        "discount = 0\n",
+        "\n",
+        "product_price = int(input(\"Enter the product price: \"))\n",
+        "\n",
+        "if product_price >= 1000:\n",
+        "    discount = product_price * 10 / 100\n",
+        "    actual_price = product_price - discount\n",
+        "    print(\"discount price\", discount)\n",
+        "    print(\"total price\", actual_price)\n",
+        "elif product_price>=2000:\n",
+        "    discount= product_price * 20 / 100\n",
+        "    actual_price = product_price - discount\n",
+        "    print(\"discount price\", discount)\n",
+        "    print(\"total price\", actual_price)\n",
+        "else:\n",
+        "    print(\"no discount available:\")\n",
+        "    print(\"total price\", product_price)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temperature=25\n",
+        "\n",
+        "if temperature > 30:\n",
+        "  print(\"its a hot day\")\n",
+        "\n",
+        "elif temperature > 20:\n",
+        "  print(\"its a warm day\")\n",
+        "\n",
+        "else:\n",
+        "  print(\"its a cold day\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ocEnveXCsS45",
+        "outputId": "6eb67c54-2af8-4aaa-dd74-c31fc4688a46"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "its a warm day\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Neasted if else"
+      ],
+      "metadata": {
+        "id": "_HcZRXxywliN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temp=30\n",
+        "hum=70\n",
+        "\n",
+        "if temp>0:\n",
+        "  if hum>60:\n",
+        "    print(\"its a hot and humid day\")\n",
+        "  else:\n",
+        "    print(\"its a hot day\")\n",
+        "else:\n",
+        "  print(\"its a cold day\")"
+      ],
+      "metadata": {
+        "id": "ZqmqDTR_wo-q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2130d1fc-bed8-4659-9a68-534f2e0d01b9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "its a hot and humid day\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#ternary conditional statement"
+      ],
+      "metadata": {
+        "id": "hqZI5LGdcPYZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temp=30\n",
+        "sobuj= \"hot day\" if temp>30 else \"cold day\" if temp>40 else \"warm day\"\n",
+        "print(sobuj)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FmtXZYYKcInS",
+        "outputId": "df844702-4319-471e-c9b7-6d74ad70e4dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "warm day\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Match color"
+      ],
+      "metadata": {
+        "id": "54UhshUcdrV5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "color=\"Green\"\n",
+        "\n",
+        "match color:\n",
+        "\n",
+        "  case \"red\":\n",
+        "    print(\"red color peyesi\")\n",
+        "  case \"blue\":\n",
+        "    print(\"blue color peyesi\")\n",
+        "  case \"white\":\n",
+        "    print(\"white color peyesi\")\n",
+        "  case \"Green\":\n",
+        "    print(\"sobuj boss paisi\")\n",
+        "  case _ :\n",
+        "    print(\"kono color mil nai\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WhmqrCyndKPt",
+        "outputId": "ff773601-7ac5-401b-baa4-addd11b1e0a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sobuj boss paisi\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
